@@ -21,6 +21,73 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 
+.bg__red {
+  background: #FFD063;
+}
+
+.menu__btn {
+  display: none;
+  margin: 0 auto;
+  width: 40px;
+  height: 30px;
+  position: relative;
+  z-index: 60;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #013A4C;
+  border-radius: 5px;
+}
+
+.menu__btn span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #013A4C;
+}
+
+.menu__btn span::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #013A4C;
+  top: calc(50% - 6px);
+}
+
+.menu__btn span::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #013A4C;
+  top: calc(50% + 6px);
+}
+
+.navigation.burger__show {
+  display: block;
+  width: 100%;
+  padding: 5px 50px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  z-index: 50;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -1103,6 +1170,14 @@ h1, h2, h3, h4, h5, h6, p {
   .navigation {
     display: none;
   }
+  .menu__btn {
+    display: block;
+  }
+  .header__nav ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .intro__content {
     padding-left: 40px;
   }
@@ -1401,6 +1476,18 @@ h1, h2, h3, h4, h5, h6, p {
   html {
     font-size: 13px;
   }
+  .navigation.burger__show {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header__nav ul li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .header__buttons {
+    width: 180px;
+    padding-left: 0;
+  }
   .header__container {
     padding: 10px 15px;
   }
@@ -1501,6 +1588,12 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .footer__middle--title {
     margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 385px) {
+  .menu__btn {
+    margin-right: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
