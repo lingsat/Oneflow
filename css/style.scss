@@ -3,9 +3,6 @@ html {
     line-height: 1;
 }
 
-// font-family: 'Roboto', sans-serif;
-// font-family: 'Work Sans', sans-serif;
-
 body {
     margin: 0;
     -webkit-font-smoothing: antialized;
@@ -24,38 +21,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 // Burger-menu
-.bg__red {
-    background: #FFD063;
-}
-
-// .menu__btn {
-//     display: none;
-//     margin: 0 auto;
-//     width: 40px;
-// 	height: 30px;
-// 	position: relative;
-// 	z-index:60;
-// 	overflow: hidden;
-//     cursor: pointer;
-//     border: 1px solid #013A4C;
-//     border-radius: 5px;
-//     span {
-//         width: 30px;
-//         height: 2px;
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//         background-color: #013A4C;
-//         transition: all 0.5s;
-//         &:nth-of-type(2) {
-//             top: calc(50% - 6px);
-//         }
-//         &:nth-of-type(3) {
-//             top: calc(50% + 6px);
-//         }
-//     }
-// }
 .menu__btn {
     display: none;
     margin: 0 auto;
@@ -98,6 +63,10 @@ h1, h2, h3, h4, h5, h6, p {
             top: calc(50% + 6px);
         }
     }
+}
+
+.bg__red {
+    background: #FFD063;
 }
 
 .navigation.burger__show {
